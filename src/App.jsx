@@ -3,24 +3,24 @@ export default function App() {
     {
       title: "DP1 Modulator Discovery",
       description:
-        "Structure-based discovery integrating molecular dynamics simulations and giga-scale virtual screening for the DP1 receptor.",
+        "Led structure-based discovery for the prostaglandin D2 receptor 1 (DP1) by integrating molecular docking, all-atom molecular dynamics simulations, and structural biology to define ligand recognition and activation mechanisms.",
     },
     {
-      title: "GPCR–Arrestin Complex Modeling",
+      title: "Giga-Scale Virtual Screening",
       description:
-        "Crosslinking-guided modeling and structural interpretation of GPCR–arrestin assemblies with computational refinement.",
+        "Performed giga-scale virtual screening of ~3 trillion Enamine REAL compounds using V-SYNTHES and prioritized hundreds of candidates for synthesis and functional evaluation, contributing to the discovery of 23 novel DP1 modulators.",
     },
     {
-      title: "Scientific Workflow Development",
+      title: "M2R–β-Arrestin-1 Complex Modeling",
       description:
-        "Python and HPC workflows for MD analysis, data processing, and reproducible computational chemistry pipelines.",
+        "Built all-atom models of the human M2R–β-arrestin-1 complex using RosettaCM and ICM-Pro, translated 65 experimental crosslinking pairs into structural restraints, and evaluated the interface with 36 µs of unbiased MD simulations in GROMACS.",
     },
   ];
 
   const publications = [
-    "Nature Communications paper on DP1-related research (upcoming / selected work)",
-    "Selected publications in JACS, Organic Letters, and Journal of Organic Chemistry",
-    "Computational studies in GPCR structure, dynamics, and ligand discovery",
+    "Davoudinasab, B.; Raskovalov, A.; Lee, W.; et al. Structural Insights into the Mechanism of Activation and Inhibition of the Prostaglandin D2 receptor 1. Nature Communications (2025).",
+    "Lee, W.; Benton, T.; Sengupta, A.; Houk, K. N. Molecular Dynamics of the Norbornyl Cation and Its Generation in Winstein–Trifan Solvolysis: The Timing of Sigma-Bridging. Journal of Organic Chemistry (2024).",
+    "Müller, T.; Lee, W.; et al. Phosphorylation site topology governs the functional dynamics of arrestin recruitment to GPCRs. Manuscript submitted.",
   ];
 
   return (
@@ -49,13 +49,15 @@ export default function App() {
           <div className="hero-text">
             <div className="pill">Academic Portfolio</div>
             <h1>
-              Computational chemist building structure-guided strategies for
-              GPCR drug discovery.
+              Computational chemist advancing GPCR drug discovery through
+              molecular modeling, large-scale virtual screening, and molecular
+              dynamics simulations.
             </h1>
             <p>
-              I work at the intersection of molecular dynamics, structural
-              biology, and medicinal chemistry to understand receptor behavior
-              and identify functionally meaningful ligands.
+              I am a postdoctoral researcher at the University of Southern
+              California developing structure-guided computational strategies
+              for ligand discovery, receptor mechanism analysis, and
+              experimentally actionable hypothesis generation.
             </p>
 
             <div className="hero-buttons">
@@ -69,14 +71,14 @@ export default function App() {
           </div>
 
           <div className="hero-card">
-            <h3>Focus Areas</h3>
+            <h3>Highlights</h3>
             <ul>
-              <li>Computational chemistry</li>
-              <li>GPCR structure and dynamics</li>
-              <li>Molecular dynamics simulations</li>
-              <li>Structure-based drug discovery</li>
-              <li>Virtual screening</li>
-              <li>Scientific Python workflows</li>
+              <li>5+ years in computational chemistry and HPC workflows</li>
+              <li>~3 trillion-compound virtual screening experience</li>
+              <li>23 novel DP1 modulators identified</li>
+              <li>36 µs unbiased MD simulations for GPCR–arrestin modeling</li>
+              <li>Ph.D. in Chemistry from UCLA</li>
+              <li>Postdoctoral Research Associate at USC</li>
             </ul>
           </div>
         </section>
@@ -85,11 +87,19 @@ export default function App() {
           <div className="section-label">About</div>
           <h2>Research profile</h2>
           <p>
-            I am a postdoctoral researcher focused on computational chemistry in
-            drug discovery, with particular interest in GPCR structure,
-            dynamics, ligand recognition, and mechanism-driven modeling. My work
-            combines atomistic simulations, structure-based modeling, and
-            workflow automation to generate experimentally useful hypotheses.
+            I am a computational chemist with a Ph.D. and experience spanning
+            drug discovery, structural biology, and computational organic
+            chemistry. My research combines molecular docking, molecular
+            dynamics simulations, structural modeling, and high-performance
+            scientific workflows to understand receptor behavior and guide
+            experimental design.
+          </p>
+          <p>
+            My recent work has focused on GPCR systems, including
+            structure-based discovery for DP1 and mechanistic modeling of the
+            human M2R–β-arrestin-1 complex. I am especially interested in
+            translating large-scale computation into experimentally useful
+            insights.
           </p>
         </section>
 
@@ -99,26 +109,29 @@ export default function App() {
 
           <div className="grid three">
             <div className="card">
-              <h3>Molecular Dynamics</h3>
+              <h3>GPCR Structure and Dynamics</h3>
               <p>
-                Protein dynamics, water networks, conformational transitions,
-                and interaction analysis.
+                Mechanistic analysis of receptor activation, ligand recognition,
+                sodium allosteric effects, and arrestin engagement using
+                atomistic modeling and simulation.
               </p>
             </div>
 
             <div className="card">
-              <h3>Structure-Based Design</h3>
+              <h3>Structure-Based Drug Discovery</h3>
               <p>
-                Receptor-informed ligand discovery using docking, refinement,
-                and screening pipelines.
+                Large-scale virtual screening, docking, hit prioritization, and
+                computational support for early-stage ligand discovery and
+                optimization.
               </p>
             </div>
 
             <div className="card">
-              <h3>Scientific Computing</h3>
+              <h3>Scientific Computing and HPC</h3>
               <p>
-                Python-driven analysis, reproducible workflows, and HPC-scale
-                computation.
+                Python-based workflow development, trajectory analysis,
+                cheminformatics, and scalable computing across Linux and GPU/HPC
+                environments.
               </p>
             </div>
           </div>
@@ -140,7 +153,7 @@ export default function App() {
 
         <section id="publications" className="section">
           <div className="section-label">Publications</div>
-          <h2>Selected outputs</h2>
+          <h2>Selected publications</h2>
 
           <div className="grid one">
             {publications.map((item) => (
@@ -158,14 +171,15 @@ export default function App() {
           <div className="contact-grid">
             <div>
               <p>
-                I am interested in computational chemistry, GPCR biology,
-                structure-based drug discovery, and collaborative scientific
-                research.
+                I am interested in collaborative opportunities in computational
+                chemistry, GPCR biology, structure-based drug discovery, and
+                scientific software workflows.
               </p>
             </div>
 
             <div className="contact-box">
               <div>Woojin Lee</div>
+              <div>Postdoctoral Research Associate</div>
               <div>University of Southern California</div>
               <div>
                 <a href="mailto:woojinl@usc.edu">woojinl@usc.edu</a>
