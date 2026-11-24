@@ -1,271 +1,47 @@
-export default function App() {
-  const scholarUrl =
-    "https://scholar.google.com/citations?hl=en&user=mln2p5EAAAAJ";
-
-  const projects = [
-    {
-      title: "DP1 Drug Discovery via Giga-Scale Virtual Ligand Screening",
-      description:
-        "Led the giga-scale virtual screening of ~3 trillion make-on-demand compounds using the V-SYNTHES and ICM-Pro. Prioritized candidates for synthesis and in vitro evaluation, directly enabling the discovery of 23 novel DP1 modulators (20 antagonists, 3 agonists) with best potencies reaching an IC50 of 1.1 µM.",
-    },
-    {
-      title: "Mechanistic Studies & Structural Dynamics of DP1",
-      description:
-        "Collaborated with cross-functional structural biology teams to define DP1 ligand recognition and activation mechanisms. Integrated molecular docking and all-atom MD simulations to elucidate critical structural features, including a DP1-specific activation switch in the sodium allosteric pocket and a stabilizing TM6–helix 8 network.",
-    },
-    {
-      title: "M2R–β-Arrestin-1 Complex Modeling",
-      description:
-        "Built all-atom models of the human M2R–β-arrestin-1 complex using RosettaCM and ICM-Pro, translated 65 experimental crosslinking pairs into structural modeling, and evaluated the interaction of the proteins with 36 µs of unbiased MD simulations in GROMACS.",
-    },
-  ];
-
-  const publications = [
-    "Müller, T.; Lee, W.; et al. Phosphorylation site topology governs the functional dynamics of arrestin recruitment to GPCRs. Manuscript under review.",
-    "Davoudinasab, B.; Raskovalov, A.; Lee, W.; et al. Structural Insights into the Mechanism of Activation and Inhibition of the Prostaglandin D2 receptor 1. Nature Communications (2025).",
-    "Lee, W.; Benton, T.; Sengupta, A.; Houk, K. N. Molecular Dynamics of the Norbornyl Cation and Its Generation in Winstein–Trifan Solvolysis: The Timing of Sigma-Bridging. Journal of Organic Chemistry (2024).",
-  ];
-
-  return (
-    <div className="site">
-      <header className="nav">
-        <div className="nav-inner">
-          <div className="brand">
-            <div className="brand-name">Woojin Lee</div>
-            <div className="brand-subtitle">
-              Computational Chemistry · Drug Discovery · GPCR Research
-            </div>
-          </div>
-
-          <nav className="menu">
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#projects">Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-      </header>
-
-      <main className="container">
-        <section className="hero">
-          <div className="hero-text">
-            <div className="pill">Portfolio</div>
-            <h1>Computational Chemist in GPCR Drug Discovery</h1>
-            <p>
-              I develop structure-guided computational strategies for ligand
-              discovery and receptor mechanism analysis. By bridging the gap
-              between high-performance computing and wet-lab chemistry, I
-              translate massive-scale data into experimentally actionable
-              hypotheses.
-            </p>
-
-            <div className="hero-buttons">
-              <a className="button button-primary" href="#projects">
-                View Projects
-              </a>
-
-              <a
-                className="button button-secondary"
-                href="/WOOJIN_LEE_RESUME.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Resume
-              </a>
-
-              <a
-                className="button button-ghost"
-                href={scholarUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Scholar
-              </a>
-
-              <a className="button button-secondary" href="#contact">
-                Contact
-              </a>
-            </div>
-          </div>
-
-          <div className="hero-card">
-            <h3>Highlights</h3>
-            <ul>
-              <li>
-                5+ years in computational chemistry and HPC workflows for CADD,
-                MD, and QM simulations
-              </li>
-              <li>
-                Discovered 23 novel GPCR DP1 modulators via giga-scale virtual
-                ligand screening (~3 trillion compounds)
-              </li>
-              <li>
-                Industry small-molecule drug discovery experience at Genentech
-              </li>
-              <li>Ph.D. in Chemistry from UCLA and B.S. from UC Berkeley</li>
-              <li>U.S. Permanent Resident</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="about" className="section">
-          <div className="section-label">About</div>
-          <h2>Research profile</h2>
-          <p>
-            I am a computational chemist with a Ph.D. from UCLA and over five
-            years of experience building high-performance computing workflows
-            for drug discovery, structural biology, and computational organic
-            chemistry. Recently, my work as a Postdoctoral Researcher at USC
-            has focused heavily on GPCR systems. This includes leading a
-            3-trillion-compound virtual screening that successfully identified
-            23 novel DP1 ligands and modeling the complex M2R–β-arrestin-1
-            interface.
-          </p>
-          <p>
-            Beyond my current focus on GPCRs and computer-aided drug discovery,
-            my foundation is deeply rooted in physical organic chemistry and
-            quantum mechanics. Because my early career included hands-on
-            synthetic organic chemistry—both in academia and during an
-            internship at Genentech—I approach computational problems with a
-            wet-lab mindset, ensuring my virtual models prioritize real-world
-            synthetic viability.
-          </p>
-          <p>
-            I thrive at the intersection of disciplines. By integrating Python,
-            Linux, and advanced AI structural modeling (such as AlphaFold and
-            Rosetta), I operate as a full-stack scientific programmer capable
-            of building customized pipelines. Whether collaborating with
-            international structural biologists or guiding synthetic chemists,
-            my ultimate goal is breaking down complex computational studies into
-            intuitive, actionable chemical concepts to accelerate therapeutic
-            development.
-          </p>
-        </section>
-
-        <section id="research" className="section">
-          <div className="section-label">Research</div>
-          <h2>What I work on is:</h2>
-
-          <div className="grid three">
-            <div className="card">
-              <h3>Structure-Based Drug Discovery</h3>
-              <p>
-                Large-scale virtual screening, docking, hit prioritization, and
-                computational support for early-stage ligand discovery and
-                optimization.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3>GPCR Structure and Dynamics</h3>
-              <p>
-                Mechanistic analysis of receptor activation, ligand recognition,
-                sodium allosteric effects, and arrestin engagement using
-                atomistic modeling and simulation.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3>Scientific Computing and HPC</h3>
-              <p>
-                Python-based workflow development, trajectory analysis,
-                cheminformatics, and scalable computing across Linux and GPU/HPC
-                environments.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="projects" className="section">
-          <div className="section-label">Projects</div>
-          <h2>Selected work</h2>
-
-          <div className="grid three">
-            {projects.map((project) => (
-              <div className="card project-card" key={project.title}>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="publications" className="section">
-          <div className="section-label">Publications</div>
-          <h2>Selected publications</h2>
-
-          <div className="grid one">
-            {publications.map((item) => (
-              <div className="card" key={item}>
-                <p>{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="pub-note">
-            Full publication list available on{" "}
-            <a href={scholarUrl} target="_blank" rel="noreferrer">
-              Google Scholar
-            </a>
-            .
-          </p>
-        </section>
-
-        <section id="contact" className="section contact">
-          <div className="section-label">Contact</div>
-          <h2>Let’s connect</h2>
-
-          <div className="contact-grid">
-            <div>
-              <p>
-                I am interested in collaborative opportunities in computational
-                chemistry, GPCR biology, structure-based drug discovery, and
-                scientific software workflows.
-              </p>
-            </div>
-
-            <div className="contact-box">
-              <div>Woojin Lee</div>
-              <div>Postdoctoral Research Associate</div>
-              <div>University of Southern California</div>
-              <div>
-                <a href="mailto:woojinl@usc.edu">woojinl@usc.edu</a>
-              </div>
-
-              <div className="contact-actions">
-                <a
-                  href="/WOOJIN_LEE_RESUME.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Resume
-                </a>
-                <span>·</span>
-                <a href={scholarUrl} target="_blank" rel="noreferrer">
-                  Google Scholar
-                </a>
-                <span>·</span>
-                <a
-                  href="https://github.com/woojinlee-drug-discovery"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-                <span>·</span>
-                <a
-                  href="https://www.linkedin.com/in/woojin-lee/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  );
+const resume = "/WOOJIN_LEE_RESUME.pdf";
+const scholar = "https://scholar.google.com/citations?hl=en&user=mln2p5EAAAAJ";
+const studies = [
+  ["Virtual screening", "Selecting DP1 ligands for synthesis", "Which compounds should advance to experimental testing?", "I led a V-SYNTHES screen of the three-trillion-compound Enamine REAL chemical space. Using structure-based screening and cheminformatics, I prioritized 275 candidates for synthesis and experimental evaluation.", "Manuscript in preparation · Co-first author"],
+  ["Structural pharmacology", "Ligand recognition and activation in DP1", "Which interactions help explain how ligands modulate the receptor?", "I combined cryo-EM structures, molecular docking, and all-atom molecular dynamics to investigate ligand recognition. We identified a DP1-specific activation switch in the sodium allosteric pocket and a stabilizing network between transmembrane helix 6 and helix 8.", "Nature Communications · 2025"],
+  ["Protein complex modeling", "How M2R engages β-arrestin-1", "How does the receptor’s third intracellular loop interact with arrestin?", "I incorporated 65 experimental crosslink restraints into M2R–β-arrestin-1 models using RosettaCM and ICM-Pro. I analyzed 36 µs of all-atom GROMACS simulations to characterize how the loop interacts with arrestin over time.", "Manuscript under review · Co-first author"],
+  ["Quantum chemistry", "Reaction pathways of short-lived intermediates", "Which steps determine reaction rates and product selectivity?", "In the Houk and Nelson labs at UCLA, I used density functional theory and dynamics simulations to study carbocations, radicals, and conformationally complex transition states. Working with experimental collaborators, I identified competing pathways that explained observed reactivity and guided follow-up experiments.", "Gaussian · ORCA · Progdyn"]
+];
+const papers = [
+  ["In preparation", "Manuscript", "Structure-based discovery of prostaglandin D2 receptor 1 modulators via virtual screening of trillion-scale chemical space", "W. Lee, A. Raskovalov, et al. · Lee and Raskovalov contributed equally"],
+  ["Under review", "Manuscript", "Phosphorylation site topology governs the functional dynamics of arrestin recruitment to GPCRs", "T. Müller, W. Lee, et al. · Müller and Lee contributed equally"],
+  ["2025", "Nature Communications", "Structural insights into the mechanism of activation and inhibition of the prostaglandin D2 receptor 1", "B. Davoudinasab, A. Raskovalov, W. Lee, et al. · 16, 8944"],
+  ["2024", "Journal of Organic Chemistry", "Molecular Dynamics of the Norbornyl Cation in Solution and Its Generation in Winstein–Trifan Solvolysis: The Timing of Sigma Bridging", "W. Lee et al. · 89, 1140–1146 · ACS Editors’ Choice"],
+  ["2023", "Journal of the American Chemical Society", "Radical and Cationic Pathways in C(sp3)–H Bond Oxygenation by Dioxiranes of Bicyclic and Spirocyclic Hydrocarbons Bearing Cyclopropane Moieties", "M. Galeotti, W. Lee, et al. · 145, 24021–24034 · Galeotti and Lee contributed equally"]
+];
+function ScreeningFigure() {
+  return <figure>
+    <div className="figurehead"><span>DP1 screening results</span><span>V-SYNTHES</span></div>
+    <div className="numeral">29</div><p>Experimentally validated DP1 modulators</p>
+    <svg viewBox="0 0 360 45" role="img" aria-label="23 antagonists and 6 agonists">
+      {Array.from({length: 29}, (_, i) => <circle key={i} cx={9 + (i % 15) * 24} cy={10 + Math.floor(i / 15) * 24} r="6" fill={i < 23 ? "#9ce9ca" : "#ffbb77"}/>)}
+    </svg>
+    <figcaption><span><i/>23 antagonists</span><span><i/>6 agonists</span></figcaption>
+  </figure>
+}
+export default function App(){
+ return <><a className="skip" href="#main">Skip to content</a><header><div className="wrap top"><a className="brand" href="#main">Woojin Lee<span>, Ph.D.</span></a><nav aria-label="Main navigation"><a href="#projects">Research</a><a href="#publications">Publications</a><a href="#about">Background</a><a href="#contact">Contact</a></nav></div></header>
+ <main id="main" className="wrap"><section className="hero"><div><div className="label">Computational chemist</div><h1>Structure-based<br/>drug discovery</h1><p className="intro">I’m Woojin Lee, a postdoctoral research associate in the Katritch Lab at USC. I use receptor structures to select small molecules for synthesis and molecular simulations to investigate how ligands and signaling proteins interact with GPCRs.</p><div className="actions"><a className="btn" href="#projects">Explore research</a><a className="outline" href={resume}>Résumé (PDF)</a></div></div><ScreeningFigure/></section>
+ <section id="projects"><h2>Selected research</h2><div className="grid">{studies.map(([area,title,question,body,result])=><article key={title}><div className="label">{area}</div><h3>{title}</h3><p className="question">{question}</p><p>{body}</p><div className="result">{result}</div></article>)}</div></section>
+ <section id="publications"><div className="sectionhead"><h2>Publications and manuscripts</h2><a href={scholar}>Full list on Google Scholar</a></div>{papers.map(([year,journal,title,authors])=><div className="paper" key={year}><b>{year}</b><div><div className="label">{journal}</div><h3>{title}</h3><p>{authors}</p></div></div>)}</section>
+ <section id="about" className="bio"><h2>Research background</h2><div>
+ <p><strong>University of Southern California · Postdoctoral Research Associate, 2023–present.</strong> In the Katritch Lab, I work with structural biologists and pharmacologists on GPCR ligand discovery, receptor activation, and arrestin recruitment.</p>
+ <p><strong>UCLA · Ph.D. in Chemistry, 2023.</strong> With Kendall N. Houk and Hosea M. Nelson, I studied the reactivity of short-lived intermediates. As a visiting researcher at Caltech in 2021–2022, I modeled cationic cascades to identify rearrangement mechanisms.</p>
+ <p><strong>Genentech · Medicinal Chemist Intern, 2017.</strong> I designed and optimized synthetic routes for dendrimer–drug conjugates and an active pharmaceutical ingredient.</p>
+ <p><strong>UC Berkeley · B.S. in Chemistry, 2016.</strong> In F. Dean Toste’s lab, I optimized the catalytic conversion of glucarate to adipate through synthesis, mechanistic studies, and chemical characterization.</p>
+ </div></section>
+ <section id="research" className="bio"><h2>Computational methods</h2><div>
+ <p><strong>Compound selection.</strong> I use V-SYNTHES, molecular docking, and protein–ligand interaction analysis to prioritize screening hits. Python and RDKit support molecular descriptor calculations and physicochemical property analysis.</p>
+ <p><strong>Molecular modeling.</strong> My toolkit includes ICM-Pro and RosettaCM for structural modeling, CHARMM-GUI and GROMACS for molecular dynamics, and MDTraj and MDAnalysis for trajectory analysis.</p>
+ <p><strong>Quantum chemistry and computing.</strong> I use Gaussian, ORCA, Progdyn, and xTB–CREST for reaction-pathway and conformational analysis. I run parallel and GPU-accelerated workflows on Linux clusters using Slurm.</p>
+ </div></section>
+ <section className="bio"><h2>Presentations and honors</h2><div>
+ <p>I presented the DP1 discovery campaign at ACS Fall 2026 in Chicago, where it was selected for Sci-Mix and presented in the COMP division. The work received a poster award at the 2026 KASBP Spring Symposium in San Diego.</p>
+ <p>Other honors include selection for the Hanwha TotalEnergies Industry-Sponsored Scholarship (2023), the UCLA Excellence in Chemistry Fellowship (2018–2023), and the UCLA Graduate Dean’s Scholar Award (2018).</p>
+ </div></section></main>
+ <footer id="contact"><div className="wrap foot"><div><div className="label">Contact</div><h2>Woojin Lee, Ph.D.</h2><p>Katritch Lab · University of Southern California · Los Angeles</p></div><div><a className="email" href="mailto:woojinl@usc.edu">woojinl@usc.edu</a><div className="links"><a href={resume}>Résumé</a><a href="https://github.com/woojinlee-drug-discovery">GitHub</a><a href="https://www.linkedin.com/in/woojin-lee/">LinkedIn</a></div></div></div></footer></>
 }
